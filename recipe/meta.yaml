@@ -25,19 +25,19 @@ requirements:
     - nceplibs-ip >=5.1.0                 # [build_platform != target_platform]
     - numpy <2.0.0                        # [build_platform != target_platform]
     - pip                                 # [build_platform != target_platform]
-    - python                              # [build_platform != target_platform]
+    - python <=3.11                       # [build_platform != target_platform]
     - setuptools >=61.0                   # [build_platform != target_platform]
   host:
     - nceplibs-ip >=5.1.0
     - numpy <2.0.0
     - pip
-    - python
+    - python <=3.11
     - setuptools >=61.0
   run:
-    - grib2io
+    - grib2io <=2.4.0
     - nceplibs-ip >=5.1.0
     - {{ pin_compatible('numpy') }}
-    - python
+    - python <=3.11
 
 test:
   imports:
